@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio pribadi Ikhsan Nadim Al Harits - Siswa Rekayasa Perangkat Lunak (RPL) SMK N Tembarak. Menampilkan profil, keahlian, dan proyek pemrograman.">
+  <meta name="author" content="Ikhsan Nadim Al Harits">
+  <meta name="theme-color" content="#0b0a10">
+  <title>Ikhsan Nadim Al Harits | Portofolio Siswa RPL</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       1. NAVBAR
+       ================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Beranda Ikhsan Nadim">
+        <span class="logo-name">Ikhsan</span><span class="logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-links" id="nav-menu" aria-label="Menu Utama">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Theme Switcher & Mobile Hamburger) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema Tampilan" title="Ganti Tema">
+          <!-- Dark icon (Moon) -->
+          <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <!-- Light icon (Sun) -->
+          <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =================================================================
+         2. HERO SECTION
+         ================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Siswa SMK N Tembarak</span>
+          </div>
+
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Ikhsan Nadim <br><span class="text-accent">Al Harits</span></h1>
+          <p class="hero-subtitle">RPL Student &amp; Aspiring Software Developer</p>
+          <p class="hero-description">
+            Siswa Rekayasa Perangkat Lunak yang tertarik mempelajari pengembangan website, programming, dan teknologi.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Lihat Project</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>Tentang Saya</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Stats / Highlights -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">XI</span>
+              <span class="stat-label">Kelas RPL B</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Teknologi Dipelajari</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Dedikasi Belajar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual: Abstract Tech Code Window -->
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-title">ikhsan_profile.json</div>
+              <div class="window-badge">RPL</div>
+            </div>
+
+            <div class="code-body">
+              <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-key">name</span>: <span class="code-string">"Ikhsan Nadim Al Harits"</span>,
+  <span class="code-key">role</span>: <span class="code-string">"RPL Student"</span>,
+  <span class="code-key">school</span>: <span class="code-string">"SMK N Tembarak"</span>,
+  <span class="code-key">class</span>: <span class="code-string">"XI RPL B"</span>,
+  <span class="code-key">skills</span>: [
+    <span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>, <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"Python"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"UI/UX"</span>
+  ],
+  <span class="code-key">status</span>: <span class="code-string">"Ready to build &amp; learn 🚀"</span>
+};</code></pre>
+            </div>
+
+            <div class="window-footer">
+              <span class="status-indicator"></span>
+              <span class="status-text">Terminal: Tembarak Dev Server Active</span>
+            </div>
+          </div>
+
+          <!-- Decorative Floating Element -->
+          <div class="floating-badge badge-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Clean Code</span>
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>SMK N Tembarak</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         3. ABOUT ME SECTION
+         ================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Profil Diri</p>
+          <h2 class="section-title">Tentang Saya</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text narrative -->
+          <div class="about-narrative-card reveal">
+            <div class="narrative-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <p class="about-text">
+              Saya Ikhsan Nadim Al Harits, siswa kelas XI RPL B di SMK N Tembarak. Saya mengambil jurusan Rekayasa Perangkat Lunak dan sedang mempelajari berbagai dasar pemrograman, pengembangan website, serta teknologi yang berkaitan dengan software.
+            </p>
+            <p class="about-text-secondary">
+              Bagi saya, pemrograman adalah sarana untuk memecahkan masalah nyata dan menuangkan ide kreatif menjadi aplikasi yang berguna. Saya antusias untuk terus mengasah kemampuan logika, arsitektur kode, serta desain antarmuka pengguna yang ramah dan intuitif.
+            </p>
+          </div>
+
+          <!-- 5 Information Cards -->
+          <div class="info-cards-grid reveal">
+            <!-- Nama -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Nama Lengkap</span>
+                <span class="info-value">Ikhsan Nadim Al Harits</span>
+              </div>
+            </div>
+
+            <!-- Alamat -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Alamat</span>
+                <span class="info-value">Bendan</span>
+              </div>
+            </div>
+
+            <!-- Sekolah -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m4 6 8-4 8 4"></path>
+                  <path d="m18 10 4 2-4 2"></path>
+                  <path d="m4 10-4 2 4 2"></path>
+                  <path d="M6 10.8V16c0 2 2.7 4 6 4s6-2 6-4v-5.2"></path>
+                </svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Sekolah</span>
+                <span class="info-value">SMK N Tembarak</span>
+              </div>
+            </div>
+
+            <!-- Kelas -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                  <path d="M3 9h18"></path>
+                  <path d="M9 21V9"></path>
+                </svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Kelas</span>
+                <span class="info-value">XI RPL B</span>
+              </div>
+            </div>
+
+            <!-- Jurusan -->
+            <div class="info-card info-card-featured">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Jurusan</span>
+                <span class="info-value">Rekayasa Perangkat Lunak</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         4. SKILLS SECTION
+         ================================================================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Kompetensi</p>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">Teknologi dan dasar pemrograman yang sedang saya tekuni secara aktif.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- HTML -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap html-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m4 3 1.5 17L12 22l6.5-2L20 3H4z"></path>
+                <path d="M16 8.5H8v3h7.5L15 16l-3 1-3-1-.2-2.5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">HTML</h3>
+            <p class="skill-desc">Struktur semantic web, aksesibilitas, dan tata letak halaman yang standar &amp; rapi.</p>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap css-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m4 3 1.5 17L12 22l6.5-2L20 3H4z"></path>
+                <path d="M7.5 8h9l-1 8.5-3.5 1-3.5-1-.3-3.5h3"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <p class="skill-desc">Styling modern, Flexbox, CSS Grid, animasi halus, responsive design, dan CSS Variables.</p>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap js-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                <path d="M16 8v8"></path>
+                <path d="M12 12v4"></path>
+                <path d="m8 13 2 1.5-2 1.5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <p class="skill-desc">Manipulasi DOM interaktif, event handling, async fetch, dan dasar logika pemrograman web.</p>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap python-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2c2.8 0 5 1.2 5 3.5v2H11c-1.7 0-3 1.3-3 3v1.5H5.5C3.2 12 2 10.8 2 8s2.2-6 5-6h5z"></path>
+                <path d="M12 22c-2.8 0-5-1.2-5-3.5v-2h6c1.7 0 3-1.3 3-3V12h2.5c2.3 0 3.5 1.2 3.5 4s-2.2 6-5 6h-5z"></path>
+                <circle cx="8" cy="6" r="1" fill="currentColor"></circle>
+                <circle cx="16" cy="18" r="1" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <p class="skill-desc">Latihan algoritma, pemecahan masalah logika, struktur data dasar, dan script otomasi.</p>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap java-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 18c3 .5 6 .5 9 0 2.5-.5 5-2 5-2"></path>
+                <path d="M6 14c3 .5 6 .5 9 0 2-.5 4-1.5 4-1.5"></path>
+                <path d="M7 10c2 .3 4.5.3 7 0 1.5-.2 3-1 3-1"></path>
+                <path d="M10 2c-1 2-1 4 1 6"></path>
+                <path d="M14 2c-1 2-1 4 1 6"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-desc">Konsep Object-Oriented Programming (OOP), class, inheritance, dan logika program terstruktur.</p>
+          </div>
+
+          <!-- UI/UX Dasar -->
+          <div class="skill-card reveal">
+            <div class="skill-icon-wrap uiux-color">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">UI/UX Dasar</h3>
+            <p class="skill-desc">Wireframing, pemilihan warna harmonis, hierarki tipografi, dan perancangan prototipe antarmuka.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         5. PROJECTS SECTION
+         ================================================================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Portofolio Karya</p>
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle">Kumpulan project yang dibuat selama proses belajar di SMK N Tembarak.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Website Portofolio -->
+          <article class="project-card reveal" data-project-id="1">
+            <div class="project-preview">
+              <!-- Custom Visual Placeholder -->
+              <div class="preview-mockup web-mockup">
+                <div class="mockup-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-url">https://ikhsan.dev/portfolio</span>
+                </div>
+                <div class="mockup-screen">
+                  <div class="mock-header"></div>
+                  <div class="mock-hero">
+                    <div class="mock-line line-lg"></div>
+                    <div class="mock-line line-md"></div>
+                    <div class="mock-btn-box"></div>
+                  </div>
+                  <div class="mock-cards">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-overlay">
+                <span class="overlay-tag">Web Development</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <h3 class="project-title">Website Portofolio</h3>
+              <p class="project-desc">
+                Website portofolio pribadi untuk menampilkan profil, skill, dan project dengan tema dark modern, mode terang adaptif, dan responsif.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <div class="project-action">
+                <button class="btn btn-outline btn-project-detail" data-project="portfolio" aria-label="Lihat detail Website Portofolio">
+                  <span>Lihat Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Program Python -->
+          <article class="project-card reveal" data-project-id="2">
+            <div class="project-preview">
+              <!-- Custom Visual Placeholder -->
+              <div class="preview-mockup python-mockup">
+                <div class="mockup-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-url">python main.py</span>
+                </div>
+                <div class="mockup-screen terminal-screen">
+                  <div class="term-line"><span class="term-prompt">&gt;&gt;&gt;</span> <span class="term-func">import</span> rpl_logic</div>
+                  <div class="term-line"><span class="term-prompt">&gt;&gt;&gt;</span> app = rpl_logic.<span class="term-method">RunExercise</span>()</div>
+                  <div class="term-line term-output">[INFO] Memproses algoritma &amp; kalkulator siswa...</div>
+                  <div class="term-line term-output term-success">[SUCCESS] Output: 100% Berhasil dieksekusi.</div>
+                  <div class="term-cursor"></div>
+                </div>
+              </div>
+              <div class="preview-overlay">
+                <span class="overlay-tag">Programming &amp; Logic</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <h3 class="project-title">Program Python</h3>
+              <p class="project-desc">
+                Beberapa program sederhana menggunakan Python untuk latihan logika dan pemrograman, seperti kalkulator, manajemen data, dan algoritma dasar.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Algorithm</span>
+                <span class="tech-tag">CLI</span>
+              </div>
+
+              <div class="project-action">
+                <button class="btn btn-outline btn-project-detail" data-project="python" aria-label="Lihat detail Program Python">
+                  <span>Lihat Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: UI/UX Design -->
+          <article class="project-card reveal" data-project-id="3">
+            <div class="project-preview">
+              <!-- Custom Visual Placeholder -->
+              <div class="preview-mockup figma-mockup">
+                <div class="mockup-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-url">Figma — Mobile App UI</span>
+                </div>
+                <div class="mockup-screen figma-canvas">
+                  <div class="figma-artboard">
+                    <div class="figma-header"></div>
+                    <div class="figma-hero"></div>
+                    <div class="figma-row">
+                      <div class="figma-box"></div>
+                      <div class="figma-box"></div>
+                    </div>
+                  </div>
+                  <div class="figma-cursor">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M3 3l7 18 3.5-7.5L21 10 3 3z"></path>
+                    </svg>
+                    <span class="figma-tag">Ikhsan</span>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-overlay">
+                <span class="overlay-tag">Interface Design</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <h3 class="project-title">UI/UX Design</h3>
+              <p class="project-desc">
+                Desain antarmuka aplikasi sederhana menggunakan Figma dengan fokus pada kemudahan navigasi, estetika modern, dan keselarasan palet warna.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">UI/UX</span>
+                <span class="tech-tag">Wireframing</span>
+              </div>
+
+              <div class="project-action">
+                <button class="btn btn-outline btn-project-detail" data-project="uiux" aria-label="Lihat detail UI/UX Design">
+                  <span>Lihat Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         6. EDUCATION SECTION
+         ================================================================= -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Pendidikan</p>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-container reveal">
+          <div class="education-card">
+            <div class="education-badge">Pendidikan Formal</div>
+
+            <div class="education-body">
+              <div class="education-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+
+              <div class="education-main-info">
+                <h3 class="education-school">SMK N Tembarak</h3>
+                <p class="education-major">Rekayasa Perangkat Lunak</p>
+                <div class="education-meta">
+                  <span class="edu-class">Kelas XI RPL B</span>
+                  <span class="meta-separator">•</span>
+                  <span class="edu-status">Siswa Aktif</span>
+                </div>
+                <p class="education-desc">
+                  Fokus pada pembelajaran pemrograman dasar, perancangan basis data, algoritma, serta pembuatan aplikasi web dan desktop.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         7. CONTACT SECTION
+         ================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Hubungi Saya</p>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">
+            Jika ingin berdiskusi mengenai project, programming, atau hal lain yang berkaitan dengan teknologi, silakan hubungi saya.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-cards-grid">
+          <!-- Email Card -->
+          <div class="contact-card reveal">
+            <div class="contact-card-header">
+              <div class="contact-icon email-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <span class="contact-type">Email</span>
+            </div>
+            <div class="contact-content">
+              <span class="contact-title">Kirim Surel</span>
+              <span class="contact-placeholder" id="email-text">fianasulistiyo@gmail.com</span>
+            </div>
+            <div class="contact-actions">
+              <a href="mailto:fianasulistiyo@gmail.com" class="btn btn-sm btn-contact" aria-label="Buka email">
+                <span>Kirim Pesan</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <button class="btn btn-sm btn-icon-only copy-btn" data-clipboard="fianasulistiyo@gmail.com" title="Salin Email" aria-label="Salin alamat email">
+                <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="contact-card reveal">
+            <div class="contact-card-header">
+              <div class="contact-icon github-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+              </div>
+              <span class="contact-type">GitHub</span>
+            </div>
+            <div class="contact-content">
+              <span class="contact-title">Repository Kode</span>
+              <span class="contact-placeholder" id="github-text">github.com/Haritscz</span>
+            </div>
+            <div class="contact-actions">
+              <a href="https://github.com/Haritscz" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-contact" aria-label="Buka profil GitHub">
+                <span>Kunjungi Profil</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <button class="btn btn-sm btn-icon-only copy-btn" data-clipboard="https://github.com/Haritscz" title="Salin Link GitHub" aria-label="Salin link GitHub">
+                <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Instagram Card -->
+          <div class="contact-card reveal">
+            <div class="contact-card-header">
+              <div class="contact-icon instagram-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span class="contact-type">Instagram</span>
+            </div>
+            <div class="contact-content">
+              <span class="contact-title">Media Sosial</span>
+              <span class="contact-placeholder" id="instagram-text">instagram.com/nadimharits</span>
+            </div>
+            <div class="contact-actions">
+              <a href="https://instagram.com/nadimharits" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-contact" aria-label="Buka profil Instagram">
+                <span>Kunjungi Profil</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <button class="btn btn-sm btn-icon-only copy-btn" data-clipboard="https://instagram.com/nadimharits" title="Salin Link Instagram" aria-label="Salin link Instagram">
+                <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder Notice -->
+        <p class="contact-note reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          Kontak di atas menggunakan placeholder yang aman dan siap Anda ubah dengan akun asli kapan saja di dalam file <code>index.html</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =================================================================
+       8. FOOTER
+       ================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">
+          <span class="logo-name">Ikhsan</span><span class="logo-dot">.</span>
+        </a>
+        <p class="footer-tagline">Siswa RPL SMK N Tembarak • Calon Pengembang Perangkat Lunak</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ikhsan Nadim Al Harits. All Rights Reserved.</p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Kembali ke atas halaman" title="Kembali ke atas">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       PROJECT DETAIL MODAL
+       ================================================================= -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Detail Project</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup jendela detail">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-tech-tags" id="modal-tags"></div>
+        <p class="modal-desc" id="modal-desc"></p>
+
+        <div class="modal-features">
+          <h4>Fitur Utama &amp; Pembelajaran:</h4>
+          <ul id="modal-features-list"></ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modal-action-close">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification (for Copy to Clipboard) -->
+  <div class="toast-notification" id="toast" role="alert" aria-live="polite">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-text">Tautan berhasil disalin!</span>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
